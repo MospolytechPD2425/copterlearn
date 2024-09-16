@@ -8,6 +8,7 @@ namespace HInteractions
     {
         [field: SerializeField] public bool IsLift { get; private set; } = false;
         [field: SerializeField] public Vector3 LiftDirectionOffset { get; private set; } = Vector3.zero;
+        
 
         public Rigidbody Rigidbody { get; protected set; }
         public IObjectHolder ObjectHolder { get; protected set; }
