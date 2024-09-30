@@ -5,7 +5,7 @@ using HInteractions;
 namespace HPhysic
 {
     [RequireComponent(typeof(Connector))]
-    public class PhysicCableCon : Liftable
+    public class PhysicCableCon : Interactable
     {
         private Connector _connector;
 
@@ -16,17 +16,15 @@ namespace HPhysic
             _connector = gameObject.GetComponent<Connector>();
         }
 
-        public override void PickUp(IObjectHolder holder, int layer)
+        public void PickUp()
         {
-            base.PickUp(holder, layer);
-
             if (_connector.ConnectedTo)
                 _connector.Disconnect();
         }
 
-        public override void Drop()
+        public void Drop()
         {
-            if (ObjectHolder.SelectedObject && ObjectHolder.SelectedObject.TryGetComponent(out Connector secondConnector))
+            if (SelectedInteractable && SelectedInteractable.TryGetComponent(out Connector secondConnector))
             {
                 if (_connector.CanConnect(secondConnector))
                     secondConnector.Connect(_connector);
@@ -36,8 +34,6 @@ namespace HPhysic
                     transform.position = (secondConnector.ConnectionPosition + secondConnector.ConnectedOutOffset * 0.2f) - (_connector.ConnectionPosition - _connector.transform.position);
                 }
             }
-
-            base.Drop();
         }
     }
 }
