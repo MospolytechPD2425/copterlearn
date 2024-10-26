@@ -1,12 +1,13 @@
+using com.cyborgAssets.inspectorButtonPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class TaskBlock : MonoBehaviour
+public abstract class TaskBlockCore : MonoBehaviour
 {
     protected Transform taskViewPrefabsParent;
     protected GameObject taskViewPrefab;
 
-    protected TaskView currentTaskView;
+    [SerializeField] protected TaskViewCore currentTaskView;
     
     public UnityEvent OnComplete;
     
@@ -24,6 +25,7 @@ public abstract class TaskBlock : MonoBehaviour
         taskViewPrefab = viewPrefab;
     }
     
+    [ProPlayButton]
     public virtual void Complete()
     {
         isCompleted = true;
@@ -48,7 +50,7 @@ public abstract class TaskBlock : MonoBehaviour
         }
         else
         {
-            currentTaskView = Instantiate(taskViewPrefab).GetComponent<TaskView>();
+            currentTaskView = Instantiate(taskViewPrefab).GetComponent<TaskViewCore>();
             currentTaskView.transform.SetParent(taskViewPrefabsParent);
             currentTaskView.SetUp(this);
         }

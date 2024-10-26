@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
-public abstract class TaskView : MonoBehaviour
+public abstract class TaskViewCore : MonoBehaviour
 {
-    [SerializeField] protected TextMeshPro taskBlockName;
+    [SerializeField] protected TextMeshProUGUI taskBlockName;
     [SerializeField] protected GameObject completedEffectGameObject;
     
-    public void SetUp(TaskBlock taskBlock)
+    public void SetUp(TaskBlockCore taskBlockCore)
     {
-        taskBlock.OnComplete.AddListener(OnCompleteHandler);
-        taskBlockName.text = taskBlock.TaskBlockName;
+        taskBlockCore.OnComplete.AddListener(OnCompleteHandler);
+        taskBlockName.text = taskBlockCore.TaskBlockName;
     }
     
     protected virtual void OnCompleteHandler()
