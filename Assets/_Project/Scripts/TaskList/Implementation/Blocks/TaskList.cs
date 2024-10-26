@@ -3,16 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using com.cyborgAssets.inspectorButtonPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-public class TaskList : TaskStage
+public class TaskList : TaskStage, IInitializable
 {
-    private int _currentTaskBlock = 0;
+    [SerializeField] private UnityEvent onInitialized;
+    public UnityEvent OnInitialized { get; }
     
-    private void Start()
-    {
-        Initialize();
-    }
+    private int _currentTaskBlock = 0;
+
+    public bool IsInitializationOnStartRequired => true;
 
     public void Initialize()
     {

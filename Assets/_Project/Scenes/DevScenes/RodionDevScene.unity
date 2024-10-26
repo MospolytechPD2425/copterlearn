@@ -1338,6 +1338,9 @@ MonoBehaviour:
   childTaskViewPrefabsParent: {fileID: 757291500}
   childTaskViewPrefab: {fileID: 3387151459736495198, guid: 0b5c94e69394b9e4ab04dc429018683d, type: 3}
   ChildTaskBlocks: []
+  onInitialized:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1139743821
 Transform:
   m_ObjectHideFlags: 0
@@ -1346,7 +1349,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139743819}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 757.0523, y: 369.37277, z: 33.920525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1531,6 +1534,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394985942}
   m_CullTransparentMesh: 1
+--- !u!1 &1413369592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1413369594}
+  - component: {fileID: 1413369593}
+  - component: {fileID: 1413369595}
+  m_Layer: 0
+  m_Name: InitializingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1413369593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413369592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d455442135f6154bb172b579e7cd1ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInitializationOnStartRequired: 1
+  onInitialized:
+    m_PersistentCalls:
+      m_Calls: []
+  isSelfSetupRequired: 1
+  initializables: []
+--- !u!4 &1413369594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413369592}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 757.0523, y: 369.37277, z: 33.920525}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1413369595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413369592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a48cada4c9a9914da2d8f19504f0afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTaskView: {fileID: 0}
+  OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  taskBlockName: 
+  childTaskViewPrefabsParent: {fileID: 0}
+  childTaskViewPrefab: {fileID: 0}
+  ChildTaskBlocks: []
 --- !u!1 &1565601819
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,3 +2200,4 @@ SceneRoots:
   - {fileID: 1139743821}
   - {fileID: 853426127}
   - {fileID: 501593089}
+  - {fileID: 1413369594}
