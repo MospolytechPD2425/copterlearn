@@ -10,6 +10,7 @@ public abstract class TaskBlockCore : MonoBehaviour
     [SerializeField] protected TaskViewCore currentTaskView;
     
     public UnityEvent OnComplete;
+    public UnityEvent OnCancel;
     
     [SerializeField] protected string taskBlockName;
 
@@ -30,6 +31,13 @@ public abstract class TaskBlockCore : MonoBehaviour
     {
         isCompleted = true;
         OnComplete?.Invoke();
+    }
+    
+    [ProPlayButton]
+    public virtual void Cancel()
+    {
+        isCompleted = false;
+        OnCancel?.Invoke();
     }
 
     public virtual void Display()

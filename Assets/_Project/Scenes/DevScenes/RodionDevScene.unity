@@ -170,6 +170,9 @@ MonoBehaviour:
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
+  OnCancel:
+    m_PersistentCalls:
+      m_Calls: []
   taskBlockName: task1
 --- !u!1 &281008345
 GameObject:
@@ -218,6 +221,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTaskView: {fileID: 0}
   OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCancel:
     m_PersistentCalls:
       m_Calls: []
   taskBlockName: task stage 3
@@ -779,6 +785,9 @@ MonoBehaviour:
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
+  OnCancel:
+    m_PersistentCalls:
+      m_Calls: []
   taskBlockName: task stage 2
   childTaskViewPrefabsParent: {fileID: 757291500}
   childTaskViewPrefab: {fileID: 3387151459736495198, guid: 0b5c94e69394b9e4ab04dc429018683d, type: 3}
@@ -1102,6 +1111,9 @@ MonoBehaviour:
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
+  OnCancel:
+    m_PersistentCalls:
+      m_Calls: []
   taskBlockName: task1
 --- !u!4 &895318890
 Transform:
@@ -1297,6 +1309,9 @@ MonoBehaviour:
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
+  OnCancel:
+    m_PersistentCalls:
+      m_Calls: []
   taskBlockName: task stage 1
   childTaskViewPrefabsParent: {fileID: 757291500}
   childTaskViewPrefab: {fileID: 3387151459736495198, guid: 0b5c94e69394b9e4ab04dc429018683d, type: 3}
@@ -1332,6 +1347,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTaskView: {fileID: 475492721}
   OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCancel:
     m_PersistentCalls:
       m_Calls: []
   taskBlockName: TaskList
@@ -1405,6 +1423,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTaskView: {fileID: 0}
   OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCancel:
     m_PersistentCalls:
       m_Calls: []
   taskBlockName: task3
@@ -1601,6 +1622,9 @@ MonoBehaviour:
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
+  OnCancel:
+    m_PersistentCalls:
+      m_Calls: []
   taskBlockName: 
   childTaskViewPrefabsParent: {fileID: 0}
   childTaskViewPrefab: {fileID: 0}
@@ -1651,6 +1675,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTaskView: {fileID: 0}
   OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCancel:
     m_PersistentCalls:
       m_Calls: []
   taskBlockName: task2
@@ -1777,6 +1804,9 @@ MonoBehaviour:
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
+  OnCancel:
+    m_PersistentCalls:
+      m_Calls: []
   taskBlockName: task2
 --- !u!1 &1714548734
 GameObject:
@@ -1860,6 +1890,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTaskView: {fileID: 0}
   OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCancel:
     m_PersistentCalls:
       m_Calls: []
   taskBlockName: task1

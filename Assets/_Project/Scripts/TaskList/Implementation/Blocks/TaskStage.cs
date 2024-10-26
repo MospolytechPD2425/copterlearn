@@ -20,6 +20,7 @@ public class TaskStage : TaskBlockCore
         {
             children.SetUp(childTaskViewPrefabsParent, childTaskViewPrefab);
             children.OnComplete.AddListener(OnChildTaskBlockComplete);
+            children.OnCancel.AddListener(OnChildTaskBlockCancel);
         }
     }
 
@@ -55,6 +56,14 @@ public class TaskStage : TaskBlockCore
         if (completedChildBlocksNumber == ChildTaskBlocks.Count)
         {
             Complete();
+        }
+    }
+    
+    protected virtual void OnChildTaskBlockCancel()
+    {
+        if (isCompleted)
+        {
+            Cancel();
         }
     }
 }

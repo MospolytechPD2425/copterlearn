@@ -49,6 +49,12 @@ public class TaskList : TaskStage, IInitializable
         Debug.Log("task list is complete");
     }
 
+    public override void Cancel()
+    {
+        base.Cancel();
+        Debug.Log("task list is canceled");
+    }
+
     public override void Display()
     {
         DisplayCurrentTaskBlock();
